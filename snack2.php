@@ -1,4 +1,26 @@
 <?php 
+    if(isset($_GET['nome']) && isset($_GET['email']) && isset($_GET['eta'])){
+        $name = $_GET['nome'];
+        $email = $_GET['email'];
+        $eta = $_GET['eta'];
+    }
+
+    if(strlen($name) >= '3'){
+        if(str_contains($email, '@') && str_contains( $email, '.')){
+            if(is_numeric($eta)){
+                echo 'Accesso riuscito';
+            }
+            else{
+                echo 'Inserire un numero';
+            }
+        }
+        else{
+            echo "Inserire almeno uno dei seguenti caratteri : '.', '@'";
+        }
+    }
+    else{
+        echo 'Inserire almeno 3 caratteri';
+    }
     
 ?>
 
@@ -21,10 +43,10 @@
                             <input type="text" name="nome" class="form-control" placeholder="Inserisci il tuo nome">
                         </div>
                         <div class="col-auto">
-                            <input type="email" class="form-control" name="email" placeholder="Inserisci la tua e-mail">
+                            <input type="text" name="email" class="form-control" placeholder="Inserisci la tua e-mail">
                         </div>
                         <div class="col-auto">
-                            <input type="number" class="form-control" name="eta" placeholder="Inserisci la tua età">
+                            <input type="text" name="eta" class="form-control" placeholder="Inserisci la tua età">
                         </div>
                         <div class="col-auto">
                             <button type="submit" class="btn btn-success mb-3">Accedi</button>

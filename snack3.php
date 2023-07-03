@@ -41,8 +41,7 @@
                 'text' => 'Testo post 6'
             ]
         ]
-    ];
-        var_dump($posts)
+    ]
 ?>
 
 <!DOCTYPE html>
@@ -56,8 +55,29 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col">
-                    
+                <div class="col mt-4 mx-5">
+                    <h3>Post di Michele Papagni:</h3>
+                    <?php foreach($posts as $index => $post){ ?>
+                        <ul>
+                            <li><h4><?php echo $index ?></h4></li>
+                            <ul>
+                                <?php foreach($post as $elem){ ?>
+                                    <li>
+                                        <h5><?php echo $elem['title'] ?></h5>
+                                        <ul>
+                                            <li>
+                                                <h6><?php echo $elem['author'] ?></h6>
+                                            </li>
+
+                                            <li>
+                                                <h6><?php echo $elem['text'] ?></h6>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                <?php }?>
+                            </ul>
+                        </ul>   
+                    <?php }?>
                 </div>
             </div>
         </div>
