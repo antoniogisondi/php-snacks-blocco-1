@@ -1,43 +1,33 @@
 <?php 
     $matches = [
         [
-            'team_1'        => 'Atlanta Hawks',
-            'team_2'        => 'Boston Celtics',
-            'score_team_1'  => rand(1,100),
-            'score_team_2'  => rand(1,100)
+            'team'  => 'Atlanta Hawks'. " - ".'Boston Celtics',
+            'score' => rand(1,100). " - ".rand(1,100),
         ],
         [
-            'team_1'        => 'Chicago Bulls',
-            'team_2'        => 'Orlando Magic',
-            'score_team_1'  => rand(1,100),
-            'score_team_2'  => rand(1,100)
+            'team' => 'Chicago Bulls'. " - ".'Orlando Magic',
+            'score' => rand(1,100). " - ".rand(1,100),
         ],
         [
-            'team_1'        => 'Detroit Pistons',
-            'team_2'        => 'Los Angeles Clippers',
-            'score_team_1'  => rand(1,100),
-            'score_team_2'  => rand(1,100)
+            'team' => 'Detroit Pistons'." - ".'Los Angeles Clippers',
+            'score' => rand(1,100). " - ".rand(1,100),
         ],
         [
-            'team_1'        => 'San Antonio Spurs',
-            'team_2'        => 'Phoenix Suns',
-            'score_team_1'  => rand(1,100),
-            'score_team_2'  => rand(1,100)
+            'team' => 'San Antonio Spurs'. " - ".'Phoenix Suns',
+            'score' => rand(1,100). " - ".rand(1,100),
         ],
         [
-            'team_1'        => 'Denver Nuggets',
-            'team_2'        => 'Cleveland Cavaliers',
-            'score_team_1'  => rand(1,100),
-            'score_team_2'  => rand(1,100)
+            'team' => 'Denver Nuggets'. " - ".'Cleveland Cavaliers',
+            'score' => rand(1,100). " - ".rand(1,100),
         ],
         [
-            'team_1'        => 'Miami Heat',
-            'team_2'        => 'Los Angeles Lakers',
-            'score_team_1'  => rand(1,100),
-            'score_team_2'  => rand(1,100)
+            'team' => 'Miami Heat'. " - ".'Los Angeles Lakers',
+            'score' => rand(1,100). " - ".rand(1,100),
         ]
     ];
 
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -51,12 +41,12 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col">
+                <div class="col mx-5">
+                    <h2>NBA Day 24</h2>
                     <ul>
-                        <?php foreach($matches as $match){
-                                echo $match['team_1']. " - " .$match['team_2']. " | " .$match['score_team_1']. " - " .$match['score_team_2'];
-                            };
-                        ?>
+                        <?php foreach($matches as $match){ ?>  
+                            <li><?php echo $match['team']. " | " .$match['score']?></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
