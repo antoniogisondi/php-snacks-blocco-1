@@ -1,14 +1,12 @@
 <?php 
     $array_number = [];
-     if(count($array_number) < 15){
-        $rand_number = rand(1,15);
+     while(count($array_number) < 15){
+        $rand_number = rand(1,50);
         
         if(!in_array($rand_number, $array_number)){
-            $array_number = $rand_number;
+            $array_number [] = $rand_number;
         }
      }
-
-     var_dump($array_number)
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +23,6 @@
                 <div class="col mx-5">
                     <h2>Number generator</h2>
                     <ul>
-                        <!-- ciclo $arr per stamparlo a schemro  -->
                         <?php foreach($array_number as $number) {?>
                             <li>
                                 <?php echo $number ?>
