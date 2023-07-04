@@ -1,28 +1,28 @@
 <?php 
     $matches = [
         [
-            'team'  => 'Atlanta Hawks'. " - ".'Boston Celtics',
-            'score' => rand(1,100). " - ".rand(1,100),
+            'team'  => 'Atlanta Hawks - Boston Celtics',
+            'score' => rand(50,130). " - ".rand(50,130),
         ],
         [
-            'team' => 'Chicago Bulls'. " - ".'Orlando Magic',
-            'score' => rand(1,100). " - ".rand(1,100),
+            'team' => 'Chicago Bulls - Orlando Magic',
+            'score' => rand(50,130). " - ".rand(50,130),
         ],
         [
-            'team' => 'Detroit Pistons'." - ".'Los Angeles Clippers',
-            'score' => rand(1,100). " - ".rand(1,100),
+            'team' => 'Detroit Pistons - Los Angeles Clippers',
+            'score' => rand(50,130). " - ".rand(50,130),
         ],
         [
-            'team' => 'San Antonio Spurs'. " - ".'Phoenix Suns',
-            'score' => rand(1,100). " - ".rand(1,100),
+            'team' => 'San Antonio Spurs - Phoenix Suns',
+            'score' => rand(50,130). " - ".rand(50,130),
         ],
         [
-            'team' => 'Denver Nuggets'. " - ".'Cleveland Cavaliers',
-            'score' => rand(1,100). " - ".rand(1,100),
+            'team' => 'Denver Nuggets - Cleveland Cavaliers',
+            'score' => rand(50,130). " - ".rand(50,130),
         ],
         [
-            'team' => 'Miami Heat'. " - ".'Los Angeles Lakers',
-            'score' => rand(1,100). " - ".rand(1,100),
+            'team' => 'Miami Heat - Los Angeles Lakers',
+            'score' => rand(50,130). " - ".rand(50,130),
         ]
     ];
 

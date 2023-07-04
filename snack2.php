@@ -1,26 +1,30 @@
 <?php 
+    $flag_name = false;
+    $flag_email = false;
+    $flag_age = false;
     if(isset($_GET['nome']) && isset($_GET['email']) && isset($_GET['eta'])){
-        $name = $_GET['nome'];
-        $email = $_GET['email'];
-        $eta = $_GET['eta'];
-    }
+        if(strlen($_GET['nome']) >= '3'){
+            $flag_name = true;
+        }
+        else{
+            echo 'Inserire almeno 3 caratteri';
+        }
 
-    if(strlen($name) >= '3'){
-        if(str_contains($email, '@') && str_contains( $email, '.')){
-            if(is_numeric($eta)){
-                echo 'Accesso riuscito';
-            }
-            else{
-                echo 'Inserire un numero';
-            }
+        if(str_contains($_GET['email'], '@') && str_contains($_GET['email'], '.')){
+            $flag_email = true;
         }
         else{
             echo "Inserire almeno uno dei seguenti caratteri : '.', '@'";
         }
+
+        if(is_numeric($_GET['eta'])){
+            $flag_age = true;
+        }
+        else{
+            echo 'Inserire un numero';
+        }
     }
-    else{
-        echo 'Inserire almeno 3 caratteri';
-    }
+
     
 ?>
 
@@ -52,6 +56,19 @@
                             <button type="submit" class="btn btn-success mb-3">Accedi</button>
                         </div>
                     </form>
+
+                    <div>
+                        <?php if(isset($_GET['nome']) && isset($_GET['email']) && isset($_GET['eta'])){ ?>
+                            <h2>
+                                <?php if($flag_name && $flag_email && $flag_age){
+                                    echo 'Accesso eseguito';
+                                }
+                                else{
+                                    echo 'Accesso negato';
+                                }?>
+                            </h2>
+                        <?php } ?>
+                    </div>
                 </div>
             </div>
         </div>
